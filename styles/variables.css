@@ -1,0 +1,226 @@
+/* ============================================
+   MATES.ARGENTINOS — Design System Variables
+   Premium E-Commerce Design Tokens (Light Theme)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  /* ── Color Palette: Emerald Green (Primary) ── */
+  --emerald-50:  #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
+  --emerald-950: #022c22;
+
+  /* ── Forest Green ─────────────────────────── */
+  --forest-50:  #f0fdf4;
+  --forest-100: #dcfce7;
+  --forest-200: #bbf7d0;
+  --forest-300: #86efac;
+  --forest-400: #4ade80;
+  --forest-500: #22c55e;
+  --forest-600: #16a34a;
+  --forest-700: #15803d;
+  --forest-800: #166534;
+  --forest-900: #14532d;
+  --forest-950: #052e16;
+
+  /* ── Sage Green ───────────────────────────── */
+  --sage-50:  #f6f7f4;
+  --sage-100: #e8ede4;
+  --sage-200: #d1dbc9;
+  --sage-300: #b4c4a8;
+  --sage-400: #96ab85;
+  --sage-500: #789267;
+  --sage-600: #5f7a50;
+  --sage-700: #4b6140;
+  --sage-800: #3e4f36;
+  --sage-900: #35432f;
+
+  /* ── Gold / Accent ────────────────────────── */
+  --gold-50:  #fefce8;
+  --gold-100: #fef9c3;
+  --gold-200: #fef08a;
+  --gold-300: #fde047;
+  --gold-400: #facc15;
+  --gold-500: #d4a574;
+  --gold-600: #c49a6c;
+  --gold-700: #a47e58;
+  --gold-800: #8a6748;
+  --gold-900: #6b4f38;
+
+  /* ── Earthy Brown ─────────────────────────── */
+  --earth-50:  #faf5f0;
+  --earth-100: #f0e6d8;
+  --earth-200: #e0cbb0;
+  --earth-300: #ccaa82;
+  --earth-400: #b8895a;
+  --earth-500: #a07040;
+  --earth-600: #8a5d35;
+  --earth-700: #6e4a2c;
+  --earth-800: #5c3d26;
+  --earth-900: #4a3220;
+
+  /* ── Semantic Colors ──────────────────────── */
+  --color-primary:       var(--emerald-600);
+  --color-primary-hover: var(--emerald-700);
+  --color-primary-dark:  var(--emerald-800);
+  --color-secondary:     var(--gold-600);
+  --color-secondary-hover: var(--gold-700);
+  --color-accent:        var(--sage-500);
+  --color-success:       #22c55e;
+  --color-warning:       #f59e0b;
+  --color-error:         #ef4444;
+  --color-info:          #3b82f6;
+
+  /* ── Backgrounds (Light Theme) ─────────────── */
+  --bg-primary:    #FAFAF9; /* Soft cream/stone */
+  --bg-secondary:  #F5F5F4;
+  --bg-tertiary:   #E7E5E4;
+  --bg-elevated:   #FFFFFF;
+  --bg-card:       rgba(255, 255, 255, 0.6);
+  --bg-card-hover: rgba(255, 255, 255, 0.9);
+  --bg-input:      rgba(255, 255, 255, 0.8);
+  --bg-overlay:    rgba(250, 250, 249, 0.85);
+
+  /* ── Text Colors ──────────────────────────── */
+  --text-primary:   #1C1917; /* Dark slate */
+  --text-secondary: #44403C;
+  --text-tertiary:  #78716C;
+  --text-muted:     #A8A29E;
+  --text-inverse:   #FFFFFF;
+  --text-accent:    var(--emerald-700);
+  --text-gold:      var(--gold-700);
+
+  /* ── Glassmorphism (Light Theme) ──────────── */
+  --glass-bg:            rgba(255, 255, 255, 0.4);
+  --glass-bg-hover:      rgba(255, 255, 255, 0.6);
+  --glass-bg-strong:     rgba(255, 255, 255, 0.85);
+  --glass-bg-subtle:     rgba(255, 255, 255, 0.2);
+  --glass-border:        rgba(0, 0, 0, 0.05);
+  --glass-border-hover:  rgba(0, 0, 0, 0.1);
+  --glass-border-strong: rgba(0, 0, 0, 0.15);
+  --glass-blur:          20px;
+  --glass-blur-strong:   40px;
+  --glass-blur-subtle:   10px;
+  --glass-shadow:        0 8px 32px rgba(0, 0, 0, 0.05);
+  --glass-shadow-hover:  0 16px 48px rgba(0, 0, 0, 0.08);
+  --glass-glow:          0 0 30px rgba(16, 185, 129, 0.05);
+  --glass-glow-hover:    0 0 40px rgba(16, 185, 129, 0.1);
+
+  /* ── Typography ───────────────────────────── */
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+  --text-8xl:  6rem;
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.05em;
+  --tracking-wider:   0.1em;
+  --tracking-widest:  0.2em;
+
+  --weight-light:     300;
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  /* ── Spacing ──────────────────────────────── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  /* ── Shadows ──────────────────────────────── */
+  --shadow-sm:       0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md:       0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg:       0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-xl:       0 16px 48px rgba(0, 0, 0, 0.1);
+  --shadow-2xl:      0 24px 64px rgba(0, 0, 0, 0.15);
+  --shadow-glow:     0 0 20px rgba(16, 185, 129, 0.1);
+  --shadow-glow-lg:  0 0 40px rgba(16, 185, 129, 0.15);
+  --shadow-glow-gold:0 0 20px rgba(212, 165, 116, 0.1);
+
+  /* ── Border Radius ────────────────────────── */
+  --radius-sm:   0.375rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-3xl:  2rem;
+  --radius-full: 9999px;
+
+  /* ── Transitions ──────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   500ms;
+  --duration-slower: 800ms;
+
+  --transition-base:      all var(--duration-normal) var(--ease-out);
+  --transition-fast:      all var(--duration-fast) var(--ease-out);
+  --transition-slow:      all var(--duration-slow) var(--ease-out);
+  --transition-transform: transform var(--duration-normal) var(--ease-out);
+  --transition-opacity:   opacity var(--duration-normal) var(--ease-out);
+  --transition-colors:    background-color var(--duration-normal) var(--ease-out),
+                          color var(--duration-normal) var(--ease-out),
+                          border-color var(--duration-normal) var(--ease-out);
+
+  /* ── Z-Index ──────────────────────────────── */
+  --z-below:   -1;
+  --z-base:    0;
+  --z-above:   10;
+  --z-sticky:  100;
+  --z-navbar:  200;
+  --z-drawer:  300;
+  --z-modal:   400;
+  --z-toast:   500;
+  --z-tooltip: 600;
+
+  /* ── Container ────────────────────────────── */
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+  --container-padding: var(--space-6);
+}
