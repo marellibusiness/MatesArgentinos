@@ -2012,19 +2012,24 @@
     margin-bottom: var(--space-6);
   }
 
-  /* Search bar expands to full row width */
+  /* Search bar: full-width, no max-width cap on mobile */
   .search-bar {
     width: 100%;
     max-width: 100%;
   }
 
-  /* Catalog controls stack vertically */
-  .catalog-controls {
-    flex-direction: column;
+  /* Catalog filters: stretch children so catalog-controls fills the full width */
+  .catalog-filters--centered {
     align-items: stretch;
   }
+
+  /* Catalog controls: full-width column on mobile so filters align with the grid */
+  .catalog-controls,
   .catalog-controls--centered {
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   /* Catalog header — always centered on mobile */
@@ -2042,10 +2047,12 @@
     max-width: 100%;
   }
 
-  /* Category tabs scroll from left — centering breaks overflow scrollability */
+  /* Category tabs: full-width, scroll from left, small inline padding to prevent first tab from clipping */
+  .category-tabs,
   .catalog-controls--centered .category-tabs {
     justify-content: flex-start;
     width: 100%;
+    padding-left: 0;
   }
 
   /* Grid always fills wrapper width */
