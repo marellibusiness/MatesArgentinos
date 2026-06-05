@@ -373,14 +373,10 @@ window.PageAdminDashboard = {
             <textarea class="form-input" id="cnt_desc" rows="3" oninput="window.previewBanner()">${c.bannerDescription}</textarea>
           </div>
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-4)">
+          <div style="margin-bottom:var(--space-4)">
             <div class="form-group">
               <label class="form-label">Texto del Botón</label>
               <input type="text" class="form-input" id="cnt_btn_text" value="${c.bannerButtonText}" oninput="window.previewBanner()">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Enlace del Botón</label>
-              <input type="text" class="form-input" id="cnt_btn_link" value="${c.bannerButtonLink}">
             </div>
           </div>
 
@@ -944,7 +940,6 @@ window.PageAdminDashboard = {
       const titleEl = document.getElementById('cnt_title');
       const descEl = document.getElementById('cnt_desc');
       const btnTextEl = document.getElementById('cnt_btn_text');
-      const btnLinkEl = document.getElementById('cnt_btn_link');
       const visibleEl = document.getElementById('cnt_visible');
 
       if (!titleEl) return;
@@ -962,7 +957,7 @@ window.PageAdminDashboard = {
         bannerTitle: title,
         bannerDescription: desc,
         bannerButtonText: btnText,
-        bannerButtonLink: btnLinkEl.value.trim() || '#/catalog',
+        bannerButtonLink: window.store.getContent().bannerButtonLink || '#/catalog',
         bannerVisible: visibleEl.checked
       });
 
