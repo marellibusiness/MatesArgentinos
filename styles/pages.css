@@ -1034,10 +1034,6 @@
   width: 100%;
 }
 
-.catalog-controls--centered .category-tabs {
-  justify-content: center;
-}
-
 /* ── Catalog Grid fixes ──────────────────────── */
 .catalog-grid {
   display: grid;
@@ -2046,9 +2042,9 @@
     max-width: 100%;
   }
 
-  /* Category tabs scrollable but centred when they fit */
+  /* Category tabs scroll from left — centering breaks overflow scrollability */
   .catalog-controls--centered .category-tabs {
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
   }
 
