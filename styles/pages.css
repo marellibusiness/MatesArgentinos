@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 80px; /* navbar height */
+  padding-top: var(--navbar-height);
   background:
     radial-gradient(ellipse 80% 60% at 50% 40%, rgba(16, 185, 129, 0.07) 0%, transparent 60%),
     radial-gradient(ellipse 50% 40% at 10% 80%, rgba(196, 154, 108, 0.06) 0%, transparent 55%),
@@ -157,7 +157,7 @@
 @media (max-width: 640px) {
   .hero-section {
     min-height: auto;
-    padding-top: 80px;
+    padding-top: var(--navbar-height);
     padding-bottom: var(--space-12);
   }
   .hero-section__features {
@@ -250,6 +250,9 @@
   margin-left: auto;
   margin-right: auto;
   padding: var(--space-32) var(--container-padding) var(--space-24);
+  /* Ensure symmetric centering on all screen widths */
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .catalog-header {
@@ -1010,11 +1013,37 @@
   .analytics-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Catalog Header centering — explicit for all viewports ── */
+.catalog-header--centered {
+  width: 100%;
+}
+
+.catalog-header--centered .catalog-title {
+  text-align: center;
+  width: 100%;
+}
+
+.catalog-header--centered p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Catalog Filters centering ───────────────── */
+.catalog-filters--centered {
+  width: 100%;
+}
+
+.catalog-controls--centered .category-tabs {
+  justify-content: center;
+}
+
 /* ── Catalog Grid fixes ──────────────────────── */
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-5);
+  width: 100%;
 }
 
 @media (max-width: 1100px) {
@@ -1448,7 +1477,7 @@
 
 /* Give hero enough bottom breathing room for indicator */
 .hero-section {
-  padding-bottom: 80px;
+  padding-bottom: var(--navbar-height);
 }
 
 @media (max-width: 640px) {
@@ -1940,19 +1969,18 @@
 
 /* ── Tablet: reduce large page / section padding ── */
 @media (max-width: 768px) {
-  /* Pages that must clear the fixed navbar (~80 px).
-     var(--space-24) = 6 rem which clears 80 px at both
-     16 px and 14 px root font sizes.                  */
+  /* Pages that must clear the fixed navbar (var(--navbar-height) = 84 px).
+     Use calc() so the px base is always honoured regardless of root font size. */
   .catalog-page-wrapper {
-    padding-top: var(--space-24);
+    padding-top: calc(var(--navbar-height) + var(--space-8));
     padding-bottom: var(--space-16);
   }
   .product-detail {
-    padding-top: var(--space-24);
+    padding-top: calc(var(--navbar-height) + var(--space-8));
     padding-bottom: var(--space-16);
   }
   .checkout-page {
-    padding-top: var(--space-24);
+    padding-top: calc(var(--navbar-height) + var(--space-8));
     padding-bottom: var(--space-16);
   }
 
@@ -2002,6 +2030,32 @@
   .catalog-controls--centered {
     align-items: center;
   }
+
+  /* Catalog header — always centered on mobile */
+  .catalog-header--centered {
+    text-align: center;
+    align-items: center;
+  }
+  .catalog-header--centered .catalog-title {
+    text-align: center;
+  }
+  .catalog-header--centered p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  /* Category tabs scrollable but centred when they fit */
+  .catalog-controls--centered .category-tabs {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Grid always fills wrapper width */
+  .catalog-grid {
+    width: 100%;
+  }
 }
 
 /* ── Phone: further reductions and full-width forms ── */
@@ -2024,15 +2078,16 @@
 /* ── Small phone: 480 px and below ──────────────── */
 @media (max-width: 480px) {
   .catalog-page-wrapper {
-    padding-top: var(--space-20);
+    /* calc ensures we always clear the fixed navbar (px) + breathing room */
+    padding-top: calc(var(--navbar-height) + var(--space-6));
     padding-bottom: var(--space-10);
   }
   .product-detail {
-    padding-top: var(--space-20);
+    padding-top: calc(var(--navbar-height) + var(--space-6));
     padding-bottom: var(--space-10);
   }
   .checkout-page {
-    padding-top: var(--space-20);
+    padding-top: calc(var(--navbar-height) + var(--space-6));
     padding-bottom: var(--space-10);
   }
   .reviews-section {
