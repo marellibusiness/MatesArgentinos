@@ -1231,13 +1231,13 @@
   display: block;
 }
 
-/* Product card image constraint ─────────────── */
+/* Product card image: aspect-ratio handles proportional sizing;
+   no max-height so the image fills the full card width at every breakpoint */
 .product-card__image {
   position: relative;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--bg-secondary);
-  max-height: 280px;
 }
 
 .product-card__image img {
